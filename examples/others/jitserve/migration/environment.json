@@ -1,0 +1,87 @@
+{
+  "captured_date": "2026-10-08",
+  "status": {
+    "fixed_estimate": "historical local verification complete",
+    "qrf": "implementation in progress; tests interrupted; no real inference evidence"
+  },
+  "platform": {
+    "machine": "x86_64",
+    "system": "Linux",
+    "glibc": [
+      "glibc",
+      "2.31"
+    ],
+    "python": "3.12.9 | packaged by Anaconda, Inc. | (main, Feb  6 2025, 18:56:27) [GCC 11.2.0]",
+    "python_symlink": "/home/zjh/miniconda3/bin/python3",
+    "openhands_python": "3.13.14 (main, Jun 23 2026, 15:18:27) [Clang 22.1.3 ]"
+  },
+  "repositories": {
+    "vllm": {
+      "base_commit": "98dff2a81d747d1dba01a47f939f48c3526d4206"
+    },
+    "openhands": {
+      "base_commit": "6152623b7b171eb0fe2917d9989425c54c27d789"
+    },
+    "reference": {
+      "base_commit": "84584a119b892cf90c65e2b3f5bac67250d39d27"
+    }
+  },
+  "core_packages": {
+    "vllm": "0.29.0+precompiled",
+    "torch": "2.13.0+cu129",
+    "torchvision": "0.28.0+cu129",
+    "torchaudio": "2.11.0+cu129",
+    "torchcodec": "0.17.0+cu130",
+    "triton": "3.7.1",
+    "transformers": "5.19.0",
+    "cuda-python": "12.9.7",
+    "cuda-bindings": "12.9.9",
+    "quantile-forest": "1.4.2",
+    "scikit-learn": "1.5.1",
+    "joblib": "1.6.0",
+    "scipy": "1.18.1",
+    "numpy": "2.3.5",
+    "threadpoolctl": "3.7.0"
+  },
+  "vllm_precompiled_wheel": {
+    "url": "https://wheels.vllm.ai/98dff2a81d747d1dba01a47f939f48c3526d4206/vllm-0.29.0%2Bcu129-cp38-abi3-manylinux_2_28_x86_64.whl",
+    "basis": "URL recovered from local uv wheel cache metadata; original wheel archive not retained; remote reachability not revalidated",
+    "extension_sha256": {
+      "vllm/_C_stable_libtorch.abi3.so": "6e4db9016fb7b3b8ef43093239a19ad1551a4013f5a83ecf1e840ce178965690",
+      "vllm/_flashmla_extension_C.abi3.so": "e8de03d0e1554c5f2102142e3ead295762fad6475a1424698ffa19b55cc42a89",
+      "vllm/_qutlass_C.abi3.so": "67c285fb344bdc10d588f312f77c4239b16057f5146787ba8c88a1e7eb206fb9",
+      "vllm/fs_io_C.abi3.so": "39a140373cde8d423bc3d53ecaa7a128806de86a7fec956f94b280cc4989d69b",
+      "vllm/_rust_tool_parser.abi3.so": "c5f089d1755688f6d4a2b78c37a711e74f0ed171b9605cc9952d835bf847e921",
+      "vllm/_flashkda_C.abi3.so": "49d52429b95d6b8fdedefb8e69d8030c1c8a6535d5a00e9afa88def39439c81d",
+      "vllm/_flashmla_C.abi3.so": "f1467006bb35dc6b98913a701920edf364c5a3d2c1dde4e474103f15c582731c",
+      "vllm/_moe_C_stable_libtorch.abi3.so": "fc8833b6352444adab239d1a3f19806b4a265b3af6685fabe2e4652abdf80d5e",
+      "vllm/spinloop.abi3.so": "73a1adafa207006761eec2b1de8134da3a0ec754fc6411b4af9d4627c6b28cfe",
+      "vllm/cumem_allocator.abi3.so": "47971c2a98ee7801b3b61124c70d523827d4790f9058cfc8ad037e9898b35358"
+    }
+  },
+  "qrf": {
+    "repository": "En-2863/jitserve-qrf-length-predictor",
+    "revision": "1e587124a9671f54f4c659f97bccbbe890b3d8af",
+    "asset": "0_qrf_lmsys_chat_llama3_8b.pkl",
+    "quantile": 0.95,
+    "retraining": false,
+    "target_model": "Qwen3.5-27B",
+    "calibrated_for_target_model": false,
+    "files": {
+      "qrf_model/0_qrf_lmsys_chat_llama3_8b.pkl": {
+        "bytes": 1341490597,
+        "sha256": "2244e85c3def85a3e6d040e80617b76a1ee95592f4230d604b4f4d193962994c"
+      },
+      "qrf_vectorizer/0_qrf_lmsys_chat_llama3_8b.pkl": {
+        "bytes": 4529414,
+        "sha256": "d89b04451c8d07347ff95058d26ecc5b968bf9ea5f29d96e6c95c40cb96639bf"
+      }
+    }
+  },
+  "generation_model_metadata_sha256": {
+    "config.json": "f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c",
+    "model.safetensors.index.json": "b3737e9d00bda0e37f0b873629d98bf9b407bef35735b9193c23d9844bcc96a6",
+    "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+  },
+  "generation_weight_shards_hashed": false
+}
